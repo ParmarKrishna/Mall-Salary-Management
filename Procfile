@@ -1,2 +1,2 @@
 release: python3 manage.py migrate
-web: gunicorn frontend-Krutarth-final_2.wsgi --log-file=-
+web: gunicorn test.wsgi --log-file=-
