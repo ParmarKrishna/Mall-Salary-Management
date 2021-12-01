@@ -1,7 +1,7 @@
 {% extends './indexbase.html' %}
 {% block content %}
-  <div>
-    <div class="card w-75">
+    <div class="eview-container">
+      <div class="card w-75 card1">
         <div class="card-body">
           <p class="card-text text-muted">Your Profile</p>
           <h1 class="card-title">{{ info.name }}</h1>
@@ -21,22 +21,22 @@
           <hr>
           <a href="{% url 'Resign' %}" class="resign btn btn-danger">Resign</a>
         </div>
-    </div>
-        <br>
-        <h3> Your Leaves</h3>
+      </div>
+      <br>
+      <h3> Your Leaves</h3>
       {% if leaves %}
       <div class="card-group card1">
-      {% for employee in leaves %}
-      <div class="card" style="width: 25rem;">
-        <div class="card-body">
-          <h5 class="card-subtitle mb-2">Leave ID : {{ employee.leave_id }}</h5>
-          <p class="card-text text-muted">Leave Reason : {{ employee.leave_reason }}</p>
-          <a href="#" class="card-link">Leave Status: {{employee.leave_status}}</a>
-          <a href="#" class="card-link">Leave Date : {{employee.leave_date}}</a>
+        {% for employee in leaves %}
+        <div class="card card1" style="width: 25rem;">
+          <div class="card-body">
+            <h5 class="card-subtitle mb-2">Leave ID : {{ employee.leave_id }}</h5>
+            <p class="card-text text-muted">Leave Reason : {{ employee.leave_reason }}</p>
+            <a href="#" class="card-link">Leave Status: {{employee.leave_status}}</a>
+            <a href="#" class="card-link">Leave Date : {{employee.leave_date}}</a>
+          </div>
         </div>
+        {% endfor %}
       </div>
-      {% endfor %}
-    </div>
       {% else %}
       <div class="alert alert-primary" role="alert">
        Your total leaves are zero.
