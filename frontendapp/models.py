@@ -8,7 +8,6 @@ class ApplyLeave(models.Model):
     leave_status = models.CharField(max_length=10, blank=True, null=True)
 
     class Meta:
-        managed = False
         db_table = 'apply_leave'
 
 
@@ -22,7 +21,6 @@ class BranchDetails(models.Model):
     branch_name = models.CharField(max_length=500, blank=True, null=True)
 
     class Meta:
-        managed = False
         db_table = 'branch_details'
 
 
@@ -37,7 +35,6 @@ class BranchManager(models.Model):
     address = models.CharField(max_length=50, blank=True, null=True)
 
     class Meta:
-        managed = False
         db_table = 'branch_manager'
 
 
@@ -52,7 +49,6 @@ class Calculation(models.Model):
     branch = models.ForeignKey(BranchManager, models.DO_NOTHING, blank=True, null=True)
 
     class Meta:
-        managed = False
         db_table = 'calculation'
 
 
@@ -73,7 +69,6 @@ class Employee(models.Model):
     gender = models.CharField(max_length=10, blank=True, null=True)
 
     class Meta:
-        managed = False
         db_table = 'employee'
 
 
@@ -86,7 +81,6 @@ class EmployeeLeaveManagement(models.Model):
     branch = models.ForeignKey(BranchManager, models.DO_NOTHING, blank=True, null=True)
 
     class Meta:
-        managed = False
         db_table = 'employee_leave_management'
 
 
@@ -98,7 +92,6 @@ class GeneralService(models.Model):
     branch = models.ForeignKey(BranchManager, models.DO_NOTHING, blank=True, null=True)
     PK = models.IntegerField(primary_key=True)
     class Meta:
-        managed = False
         db_table = 'general_service'
 
 
@@ -114,7 +107,6 @@ class HeadManager(models.Model):
     address = models.CharField(max_length=500, blank=True, null=True)
 
     class Meta:
-        managed = False
         db_table = 'head_manager'
 
 
@@ -124,7 +116,6 @@ class Login(models.Model):
     role = models.CharField(db_column='ROLE', max_length=300)  # Field name made lowercase.
 
     class Meta:
-        managed = False
         db_table = 'login'
 
 
@@ -145,7 +136,6 @@ class PastUserRecords(models.Model):
     branch = models.ForeignKey(BranchManager, models.DO_NOTHING, blank=True, null=True)
 
     class Meta:
-        managed = False
         db_table = 'past_user_records'
 
 
@@ -157,7 +147,6 @@ class ProductDetails(models.Model):
     cost = models.IntegerField(blank=True, null=True)
     PK = models.IntegerField(primary_key=True)
     class Meta:
-        managed = False
         db_table = 'product_details'
 
 
@@ -167,5 +156,4 @@ class Resignation(models.Model):
     resign_date = models.DateField(blank=True, null=True)
 
     class Meta:
-        managed = False
         db_table = 'resignation'
