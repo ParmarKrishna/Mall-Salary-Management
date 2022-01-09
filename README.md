@@ -1,4 +1,4 @@
-# frontend-t2
+# SQL-DjangoFramwork
 <h3>Get Started with project</h3>
 <ul>
   <li> <a href="https://www.python.org/downloads/"> Installing Python</a></li>
