@@ -80,14 +80,14 @@ WSGI_APPLICATION = 'frontend.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME':'d5hq1mbmd13asc',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME':'d4mfug6qocvsjp',
         'OPTIONS' : {
                 'options': '-c search_path=salary_managment,public'
             },
-        'USER':'rxvwbtpfkatycr',
-        'PASSWORD':'23950c86d12975cf003e3d6139e7a9814cc302c398e444ef35d4e17b71aaaf5c',
-        'HOST':'ec2-3-95-130-249.compute-1.amazonaws.com',
+        'USER':'xdwuwmfqsxeers',
+        'PASSWORD':'2e91eeb26d30650e03d6a4071a5f4004ef3546507376f982e38ca640c67a6697',
+        'HOST':'ec2-34-230-153-41.compute-1.amazonaws.com',
         'PORT':'5432'
     }
 }
