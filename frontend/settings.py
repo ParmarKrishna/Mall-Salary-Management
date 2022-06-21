@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-xwkr@@%uu8dnmuv=ipzgh2aox0_v*^kzvlp2e_3tmba8q^6#=z
 DEBUG = False
 
 
-ALLOWED_HOSTS = ['mallsalarymanagement.herokuapp.com','127.0.0.1']
+ALLOWED_HOSTS = ['mysalarymanagement.herokuapp.com','mallsalarymanagement.herokuapp.com','127.0.0.1']
 
 
 # Application definition
